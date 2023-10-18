@@ -1,28 +1,29 @@
-# React + TypeScript + Vite
+# Todo App with React and Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Todo App built using React and styled with Tailwind CSS. This application allows you to add, edit, delete, and clear tasks, with data persisted in local storage.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new tasks with a user-friendly interface.
+- Edit existing tasks.
+- Delete tasks one by one.
+- Clear all tasks and reset local storage.
 
-## Expanding the ESLint configuration
+## Usage
+- To add a new task, type the task description in the input field and click "Add Task."
+- To edit a task, click the "Edit" button next to the task you want to edit. The task's description will appear in the input field. Make your changes and click "Update Task" to save.
+- To delete a task, click the "Delete" button next to the task you want to remove.
+- To clear all tasks and reset local storage, click "Clear All Tasks and LocalStorage."
+- Custom Hook for Task Management
+The code includes a custom hook, useTasks, which encapsulates task management functionality. This hook can be easily reused in other components for similar task management needs.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Styling with Tailwind CSS
+The app is styled using Tailwind CSS classes to create an eye-catching and responsive user interface.
 
-- Configure the top-level `parserOptions` property like this:
+## Contact Information
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+For any inquiries or further information, please feel free to contact me:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# job-task-todo-app
+- Phone: +8801734921621
+- Email: [mahamodulhasan.moon@gmail.com](mailto:mahamodulhasan.moon@gmail.com)
+
