@@ -20,6 +20,11 @@ export default function App() {
     setNewTask("");
   };
 
+  const editTaskHandler = (index: number) => {
+    setEditTask(index);
+    setNewTask(tasks[index]); // Set the task to edit in the input field
+  };
+
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
       <h1 className="text-3xl mb-4">Todo App</h1>
@@ -46,20 +51,31 @@ export default function App() {
         Clear All Tasks and LocalStorage
       </button>
 
-      <ul className="mt-6">
+      <ul className="mt-6 min-w-[400px]">
         {tasks.map((task, index) => (
           <li
             key={index}
-            className="bg-white p-2  my-2 flex justify-between items-center rounded shadow"
+            className="bg-white p-2 my-2 flex justify-between items-center rounded shadow"
           >
-            {task}
-            <div className="mx-20">
-              <button
-                onClick={() => setEditTask(index)}
-                className="bg-blue-500 text-white p-1 rounded mr-2 hover:bg-blue-600"
-              >
-                Edit
-              </button>
+            {editTask === index ? (
+              <input
+                type="text"
+                value={newTask}
+                onChange={(e) => setNewTask(e.target.value)}
+                className="w-3/4 p-1 rounded border mr-2"
+              />
+            ) : (
+              task
+            )}
+            <div className="flex items-center gap-4">
+
+                <button
+                  onClick={() => editTaskHandler(index)}
+                  className="bg-blue-500 text-white p-1 rounded mr-2 hover:bg-blue-600"
+                >
+                  Edit
+                </button>
+             
               <button
                 onClick={() => deleteTask(index)}
                 className="bg-red-500 text-white p-1 rounded hover:bg-red-600"
